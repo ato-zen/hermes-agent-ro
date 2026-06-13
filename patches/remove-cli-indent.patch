@@ -1,0 +1,27 @@
+From: ato-zen
+Date: 2026-06-13
+Subject: Remove 4-space indent from Hermes CLI responses
+
+Remove the default 4-space indentation from streamed responses and the
+rich Panel padding in Hermes CLI. This makes responses align flush-left
+with the prompt, saving horizontal space.
+
+diff --git a/cli.py b/cli.py
+index a9e379141..21de5ff96 100644
+--- a/cli.py
++++ b/cli.py
+@@ -1654,7 +1654,7 @@ _ACCENT_ANSI_DEFAULT = "\033[1;38;2;255;215;0m"  # True-color #FFD700 bold — fallback
+ _BOLD = "\033[1m"
+ _RST = "\033[0m"
+-_STREAM_PAD = "    "  # 4-space indent for streamed response text (matches Panel padding)
++_STREAM_PAD = ""  # 0-space indent for streamed response text
+ 
+ def _hex_to_ansi(hex_color: str, *, bold: bool = False) -> str:
+@@ -10424,7 +10424,7 @@ class HermesCLI(CLIAgentSetupMixin, CLICommandsMixin):
+                         border_style=_resp_color,
+                         style=_resp_text,
+                         box=rich_box.HORIZONTALS,
+-                        padding=(1, 4),
++                        padding=(1, 0),
+                         width=self._scrollback_box_width(),
+                     ))
