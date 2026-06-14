@@ -2,7 +2,9 @@
   <img src="assets/banner.png" alt="Hermes Agent" width="100%">
 </p>
 
-# Hermes Agent ☤
+# Hermes Agent ☤ (/ro — Read-Only Mode) 🛡️
+> **Fork with a built-in `/ro` read-only mode.** Toggle read-only mode with `/ro` — the agent can still answer questions, read files, and search the web, but all write operations are blocked at the code level. Whitelist-enforced, fail-closed. [Learn more about the feature →](https://github.com/NousResearch/hermes-agent/pull/45477)
+
 <p align="center">
   <a href="https://hermes-agent.nousresearch.com/">Hermes Agent</a> | <a href="https://hermes-agent.nousresearch.com/">Hermes Desktop</a>
 </p>
